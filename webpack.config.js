@@ -1,15 +1,10 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
-const templates = [
-  "index",
-  "claro-tv-hd",
-  "claro-internet",
-  "claro-planos-celular",
-  "claro-pos-pago",
-  "claro-controle",
-  "claro-familia",
-];
+const templates = [];
+
+const assetsPath = ["images", "styles", "scripts"];
 
 module.exports = {
   mode: "production",
@@ -17,15 +12,20 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "main.js",
-    clean: true,
   },
   plugins: [
     ...templates.map(
-      (template) =>
+      (templatePath) =>
         new HtmlWebpackPlugin({
-          template: `./src/templates/${template}.html`,
-          filename: `${template}.html`,
+          template: templatePath,
+          filename: templatePath.replace("src/templates/", ""),
         })
     ),
+    new CopyPlugin({
+      patterns: assetsPath.map((asset) => ({
+        from: `./src/${asset}`,
+        to: asset,
+      })),
+    }),
   ],
 };
