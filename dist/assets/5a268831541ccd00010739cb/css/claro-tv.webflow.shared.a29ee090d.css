@@ -416,6 +416,10 @@ pre.w-code-block code {
   display: inline-block !important;
 }
 
+.w-webflow-badge {
+  display: none !important;
+}
+
 h1,
 h2,
 h3,
