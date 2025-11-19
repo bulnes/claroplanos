@@ -51,7 +51,8 @@ export function Footer() {
             src="/claro-branca-p-500.webp"
             alt=""
             width={150}
-            height={47}
+            height={48}
+            className="h-12 w-auto"
           />
 
           {links.map((section) => (

@@ -1,3 +1,5 @@
+import { Footer } from "@/components/footer";
+import { NavProfile } from "@/components/nav-profile";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL } from "@/constants";
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
@@ -12,14 +14,20 @@ export const metadata: Metadata = {
   title: SITE_TITLE,
   description: SITE_DESCRIPTION,
   keywords: [
-    "automação",
-    "jurídica",
-    "IA para advogados",
-    "atendimento automático",
-    "escritório digital",
-    "tecnologia jurídica",
-    "chatbot jurídico",
-    "CRM jurídico",
+    "claro planos",
+    "planos claro",
+    "claro internet",
+    "internet claro",
+    "claro telefone",
+    "telefone claro",
+    "claro tv",
+    "tv claro",
+    "claro celular",
+    "celular claro",
+    "claro para empresas",
+    "planos claro para empresas",
+    "claro planos empresariais",
+    "planos empresariais claro",
   ],
   authors: [{ name: SITE_NAME, url: SITE_URL }],
   publisher: SITE_NAME,
@@ -47,7 +55,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} antialiased`}>{children}</body>
+      <body className={`${geistSans.variable} antialiased`}>
+        <NavProfile />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

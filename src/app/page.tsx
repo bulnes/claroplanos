@@ -1,7 +1,10 @@
+import { Header } from "@/components/header";
+
 export default function Home() {
   return (
-    <div>
-      <h1>Claro Serviços</h1>
-    </div>
+    <>
+      <Header />
+      <h1>Eu sou uma pessoa</h1>
+    </>
   );
 }
