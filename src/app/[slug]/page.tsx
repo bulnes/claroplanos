@@ -1,3 +1,4 @@
+import { Banner } from "@/components/banner";
 import { Header } from "@/components/header";
 
 export default async function PageEmpresas({
@@ -10,6 +11,7 @@ export default async function PageEmpresas({
   return (
     <>
       <Header />
+      <Banner pathname={`/${slug}`} />
       <h1>Eu sou uma pessoa: {slug}</h1>
     </>
   );
