@@ -2,10 +2,12 @@ import { Banner } from "@/components/banner";
 import { Header } from "@/components/header";
 
 export default function HomeEmpresas() {
+  const pathname = "/empresas";
+
   return (
     <>
-      <Header type="empresa" />
-      <Banner pathname="/empresas" />
+      <Header pathname={pathname} type="empresa" />
+      <Banner pathname={pathname} />
       <h1>Eu sou uma empresa</h1>
     </>
   );

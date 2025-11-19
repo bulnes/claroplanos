@@ -4,7 +4,13 @@ import menuParaVc from "@/data/para-vc/menu.json";
 import Image from "next/image";
 import Link from "next/link";
 
-export function Header({ type }: { type?: "default" | "empresa" }) {
+export function Header({
+  type,
+  pathname,
+}: {
+  type?: "default" | "empresa";
+  pathname: string;
+}) {
   const links = type === "empresa" ? menuParaEmpresas : menuParaVc;
 
   return (
@@ -29,7 +35,9 @@ export function Header({ type }: { type?: "default" | "empresa" }) {
               <Link
                 key={item.url + item.label}
                 href={item.url}
-                className="mr-6 hover:underline"
+                className={`ml-6 pb-0.5 border-b border-transparent hover:border-white ${
+                  pathname === item.url ? "border-white" : ""
+                }`}
               >
                 {item.label}
               </Link>

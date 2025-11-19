@@ -7,11 +7,12 @@ export default async function PageEmpresas({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+  const pathname = `/${slug}`;
 
   return (
     <>
-      <Header />
-      <Banner pathname={`/${slug}`} />
+      <Header pathname={pathname} />
+      <Banner pathname={pathname} />
       <h1>Eu sou uma pessoa: {slug}</h1>
     </>
   );
