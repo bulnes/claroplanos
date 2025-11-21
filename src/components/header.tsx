@@ -16,7 +16,7 @@ export function Header({
   return (
     <header>
       <div className="bg-[#1f1d1d] text-white">
-        <div className="container mx-auto py-4 flex items-center justify-between">
+        <div className="container mx-auto py-4 px-4 md:px-0 flex flex-col md:flex-row gap-4 items-center md:justify-between">
           <Link href="/">
             <h1>
               <Image
@@ -30,12 +30,12 @@ export function Header({
             </h1>
           </Link>
 
-          <div>
+          <div className="flex flex-row gap-6">
             {links.map((item) => (
               <Link
                 key={item.url + item.label}
                 href={item.url}
-                className={`ml-6 pb-0.5 border-b border-transparent hover:border-white ${
+                className={`pb-0.5 border-b border-transparent hover:border-white ${
                   pathname === item.url ? "border-white" : ""
                 }`}
               >

@@ -1,5 +1,6 @@
 import { Banner } from "@/components/banner";
 import { Header } from "@/components/header";
+import { Sections } from "@/components/sections";
 
 export default async function PageEmpresas({
   params,
@@ -13,7 +14,7 @@ export default async function PageEmpresas({
     <>
       <Header pathname={pathname} />
       <Banner pathname={pathname} />
-      <h1>Eu sou uma pessoa: {slug}</h1>
+      <Sections pathname={pathname} />
     </>
   );
 }

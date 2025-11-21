@@ -33,13 +33,7 @@ export function Banner({ pathname }: { pathname: string }) {
       <picture>
         <source srcSet={desktop} media="(min-width: 768px)" />
 
-        <img
-          src={mobile}
-          alt={label}
-          title={label}
-          loading="lazy"
-          width="100%"
-        />
+        <img src={mobile} alt={label} title={label} width="100%" />
       </picture>
     </Link>
   );

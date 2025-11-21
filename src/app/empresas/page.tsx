@@ -1,5 +1,6 @@
 import { Banner } from "@/components/banner";
 import { Header } from "@/components/header";
+import { Sections } from "@/components/sections";
 
 export default function HomeEmpresas() {
   const pathname = "/empresas";
@@ -8,7 +9,7 @@ export default function HomeEmpresas() {
     <>
       <Header pathname={pathname} type="empresa" />
       <Banner pathname={pathname} />
-      <h1>Eu sou uma empresa</h1>
+      <Sections pathname={pathname} />
     </>
   );
 }

@@ -44,7 +44,7 @@ const links: {
 
 export function Footer() {
   return (
-    <footer className="bg-[#A41C18] text-white py-16">
+    <footer className="bg-claro-level-2 text-white py-16">
       <div className="container mx-auto px-4 md:px-0 flex flex-col items-start gap-6">
         <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between w-full mb-16">
           <Image

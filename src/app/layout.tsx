@@ -1,14 +1,9 @@
 import { Footer } from "@/components/footer";
 import { NavProfile } from "@/components/nav-profile";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL } from "@/constants";
+import { amx } from "@/fonts/amx";
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: SITE_TITLE,
@@ -55,7 +50,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} antialiased`}>
+      <body
+        className={`${amx.variable} antialiased bg-[#f8f8f8] text-[#1f1d1d]`}
+      >
         <NavProfile />
         {children}
         <Footer />
