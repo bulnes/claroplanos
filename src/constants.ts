@@ -5,4 +5,4 @@ export const SITE_DESCRIPTION = "Assine os planos da Claro Na Promoção e Tenha
 
 export const DEFAULT_PHONE = "1151922595";
 export const DEFAULT_WHATSAPP_PHONE = `55${DEFAULT_PHONE}`;
-export const DEFAULT_WHATSAPP_MESSAGE = "Olá, quero agendar uma demonstração sobre os serviços de IA da Quero Direito.";
+export const DEFAULT_WHATSAPP_MESSAGE = "Olá, gostaria de saber mais sobre os planos e serviços da Claro.";

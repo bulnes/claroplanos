@@ -1,4 +1,5 @@
 import { Card as CardType } from "@/@types/card";
+import { getWhatsappLink } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,6 +8,8 @@ interface CardProps {
 }
 
 export function Card({ data }: CardProps) {
+  const whatsappLink = getWhatsappLink();
+
   const cardData = {
     ribbon: "",
     title: "",
@@ -15,7 +18,7 @@ export function Card({ data }: CardProps) {
     price: "",
     priceDescription: "",
     priceDetails: "",
-    whatsappLink: "",
+    whatsappLink,
     onlineLink: "",
     ...data,
   };
