@@ -1,19 +1,29 @@
 {
   "name": "claroplanos",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "http-server ./dist",
-    "build": "exit 0"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "update": "ncu --interactive --format group"
   },
-  "author": "Bruno César Bulnes",
-  "license": "ISC",
+  "dependencies": {
+    "lucide-react": "^0.555.0",
+    "next": "16.0.7",
+    "react": "19.2.1",
+    "react-dom": "19.2.1"
+  },
   "devDependencies": {
-    "copy-webpack-plugin": "^13.0.1",
-    "html-webpack-plugin": "^5.6.4",
-    "http-server": "^14.1.1",
-    "webpack": "^5.102.1",
-    "webpack-cli": "^6.0.1"
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^24",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.0.7",
+    "npm-check-updates": "^19.1.2",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
